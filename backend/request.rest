@@ -1,0 +1,106 @@
+// ++++++++++++++{Create a user}++++++++++++++\\
+
+# POST http://localhost:5000/users
+# Content-Type: application/json
+# {
+#     "name":"Gitesh",
+#     "email":"Githes@gmail.com",
+#     "password":"123456",
+#     "confPassword":"123456",
+#     "role":"admin"
+# }
+
+
+// ++++++++++++++{Get all Users}++++++++++++++\\
+
+# GET http://localhost:5000/users
+
+
+// ++++++++++++++{Get user by ID}++++++++++++++\\
+
+# GET http://localhost:5000/users/9c1b84a7-b8bc-45f8-8f00-7113b40d5afd
+
+
+
+// ++++++++++++++{Udate User}++++++++++++++\\
+
+# PATCH http://localhost:5000/users/9c1b84a7-b8bc-45f8-8f00-7113b40d5afd
+# Content-Type: application/json
+
+# {
+#     "name":"Gitesh Updated",
+#     "email":"lokhande.gitesh@gmail.com",
+#     "password":"",
+#     "confPassword":"",
+#     "role":"users"
+# }
+
+
+// ++++++++++++++{Delete User}++++++++++++++\\
+# DELETE http://localhost:5000/users/ccdd7dde-d84e-4cb0-8b34-57a48980a4e6
+
+
+
+//----------{auth route}------------\\
+// ++++++++++++++{Admin Login}++++++++++++++\\
+
+# POST  http://localhost:5000/login
+# Content-Type: application/json
+
+# {
+#     "email": "lokhande.gitesh@gmail.com",
+#     "password": "123456"
+# }
+
+// ++++++++++++++{Noramal User login}++++++++++++++\\
+# # # ##login
+# POST  http://localhost:5000/login
+# Content-Type: application/json
+
+# {
+#     "email": "tushar@gmail.com",
+#     "password": "12345"
+# }
+
+
+
+// ++++++++++++++{Single User Login}++++++++++++++\\
+# GET http://localhost:5000/me
+
+
+
+// ++++++++++++++{Logout User}++++++++++++++\\
+# DELETE  http://localhost:5000/logout
+
+
+// ++++++++++++++{Create Product}++++++++++++++\\
+
+# POST http://localhost:5000/products
+# Content-Type: application/json
+
+# {
+#     "name": "Product 3",
+#     "price": 3000
+# }
+
+// ++++++++++++++{Get all Products}++++++++++++++\\
+
+# GET http://localhost:5000/products
+
+// ++++++++++++++{Get Product by ID}++++++++++++++\\
+# GET http://localhost:5000/products/ed365326-f636-4705-811b-2345dc7c5465
+
+
+// ++++++++++++++{update Product by ID}++++++++++++++\\
+# PATCH  http://localhost:5000/products/a0fff10e-2384-4ae3-bddd-39d49001d251
+# Content-Type: application/json
+
+# {
+#     "name": "Product updated",
+#     "price":200
+# }
+
+# // ++++++++++++++{Delete Products}++++++++++++++\\
+# DELETE  http://localhost:5000/products/a0fff10e-2384-4ae3-bddd-39d49001d251
+
+
